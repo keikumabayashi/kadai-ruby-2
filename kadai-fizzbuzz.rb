@@ -1,18 +1,16 @@
-def Fizzbuzz
-    i = 1
-    while i <= 100
-        if i%3 == 0 && i%5 != 0
+def fizzbuzz(num)
+        if num%3 == 0 && num%5 != 0
                 puts 'Fizz'
-            elsif i%3 != 0 && i%5 == 0
+            elsif num%3 != 0 && num%5 == 0
                 puts 'Buzz'
-            elsif i%3 == 0 && i%5 == 0
+            elsif num%3 == 0 && num%5 == 0
                 puts 'FizzBuzz'
             else
-                puts i
+                puts num
         end
-        i = i + 1
-    end
-
 end
 
-Fizzbuzz()
+num_max = 100
+
+(1..num_max).each do |num|
+    fizzbuzz(num)
